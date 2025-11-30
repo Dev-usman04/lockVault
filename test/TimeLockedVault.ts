@@ -15,7 +15,7 @@ describe("TimeLockedVault", function () {
 
     const [lockedAmount, unlockTime] = await vault.getUserLock(user1.address);
     expect(lockedAmount).to.equal(amount);
-    expect(unlockTime).to.be.greaterThan(await time.latest());
+    expect(unlockTime).to.be.greaterThan(await time.latest()); 
   });
 
   it("should not allow zero deposit", async function () {
@@ -109,6 +109,7 @@ describe("TimeLockedVault", function () {
 
     expect(user1Amount).to.equal(amount1);
     expect(user2Amount).to.equal(amount2);
+    
   });
 });
 
